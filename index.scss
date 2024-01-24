@@ -75,6 +75,12 @@
         display: none;
       }
 
+      .active {
+        .bar {
+          opacity: 0;
+        }
+      }
+
       .hamburger-circle {
         width: 60px;
         height: 60px;
@@ -135,8 +141,8 @@
     }
 
     @media (max-width: 768px) {
-      font-size: 40px; /* Adjust the font size for smaller screens */
-      text-align: center; /* Center the text */
+      font-size: 40px;
+      text-align: center;
     }
   }
 
@@ -166,7 +172,7 @@
       font-size: 16px;
 
       @media (max-width: 768px) {
-        display: none; /* Hide the right arrow span on smaller screens */
+        display: none;
       }
     }
   }
@@ -429,11 +435,11 @@
       flex-direction: column;
       gap: 10px;
       max-height: 400px;
-      flex: 1; /* Each article takes equal width */
+      flex: 1;
 
       img {
-        width: 100%; /* Make images take 100% width */
-        height: 100%; /* Maintain image proportions */
+        width: 100%;
+        height: 100%;
         object-fit: contain;
       }
     }
@@ -476,7 +482,7 @@
     }
 
     .grid-articles .article-text {
-      font-size: 16px; /* Change this to the desired font size */
+      font-size: 16px;
     }
   }
 
