@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "museoSans500";
+  src: url("/fonts/MuseoSans_500.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "museoSans700";
+  src: url("/fonts/MuseoSans_700.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "museoSans100";
+  src: url("/fonts/MuseoSans-100.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "museoSans300";
+  src: url("/fonts/MuseoSans-300.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  color-scheme: dark light;
+}
+body {
+  min-height: 100vh;
+  font-family: "museoSans500", sans-serif;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}

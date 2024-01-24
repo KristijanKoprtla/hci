@@ -1,0 +1,17 @@
+[
+  {
+    "path": "images/slide1.jpg",
+    "title": "Itaque earum rerum hic tenetur",
+    "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti"
+  },
+  {
+    "path": "images/slide2.jpg",
+    "title": "Commodi debitis dignissimos accusantium praesentium",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quod."
+  },
+  {
+    "path": "images/slide3.jpg",
+    "title": "praesentium maiores excepturi",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, accusamus."
+  }
+]
