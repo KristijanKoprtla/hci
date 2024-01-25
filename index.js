@@ -1,9 +1,58 @@
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger-icon");
+  const navList = document.querySelector(".nav-list");
+
+  function toggleNavList() {
+    const isHamburgerActive = hamburger.classList.contains("active");
+    const isSmallScreen = window.innerWidth < 768;
+
+    if (isSmallScreen) {
+      navList.style.display = isHamburgerActive ? "flex" : "none";
+    } else {
+      navList.style.display = "flex";
+    }
+  }
 
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
+    toggleNavList();
+    updateHamburgerStyles();
   });
+
+  toggleNavList();
+  updateHamburgerStyles();
+
+  window.addEventListener("resize", () => {
+    toggleNavList();
+    updateHamburgerStyles();
+  });
+
+  function updateHamburgerStyles() {
+    const isActive = hamburger.classList.contains("active");
+
+    if (isActive) {
+      document
+        .querySelectorAll(".hamburger-icon .bar:nth-child(2)")
+        .forEach((bar) => {
+          bar.style.opacity = "0";
+        });
+      document
+        .querySelectorAll(".hamburger-icon .bar:nth-child(1)")
+        .forEach((bar) => {
+          bar.style.transform = "translateY(8px) rotate(45deg)";
+        });
+      document
+        .querySelectorAll(".hamburger-icon .bar:nth-child(3)")
+        .forEach((bar) => {
+          bar.style.transform = "translateY(-8px) rotate(-45deg)";
+        });
+    } else {
+      document.querySelectorAll(".hamburger-icon .bar").forEach((bar) => {
+        bar.style.opacity = "1";
+        bar.style.transform = "none";
+      });
+    }
+  }
 
   // Fetching data
   fetch("./imageCarusel.json")

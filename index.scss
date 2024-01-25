@@ -10,7 +10,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 120px;
-
   background-color: #fff;
   height: 80px;
 
@@ -51,65 +50,65 @@
   .hamburger-icon {
     display: none;
     cursor: pointer;
-  }
 
-  .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    transition: all 0.3s ease, opacity 0.3s ease;
-    background-color: blue;
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s ease, opacity 0.3s ease;
+      background-color: blue;
 
-    &:nth-child(2) {
-      width: 22px;
-      margin-right: 3px;
+      &:nth-child(2) {
+        width: 22px;
+        margin-right: 3px;
+      }
     }
   }
 
   @media (max-width: 768px) {
-    & {
-      padding: 0 20px;
+    padding: 0 20px;
 
-      .nav-list {
-        display: none;
-      }
+    .hamburger-circle {
+      width: 60px;
+      height: 60px;
+      border: 3px solid blue;
+      border-radius: 50%;
+      position: relative;
 
-      .active {
-        .bar {
-          opacity: 0;
-        }
-      }
-
-      .hamburger-circle {
-        width: 60px;
-        height: 60px;
-        border: 3px solid blue;
-        border-radius: 50%;
-        position: relative;
-      }
       .hamburger-icon {
         display: block;
         position: absolute;
         left: 15px;
         top: 12px;
-
-        &.active {
-          .bar:nth-child(2) {
-            opacity: 0;
-          }
-          .bar:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
-          }
-          .bar:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
-          }
-        }
       }
     }
   }
-}
 
+  @media (max-width: 768px) {
+    .nav-list {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 61.3%;
+      position: absolute;
+      left: 0px;
+      bottom: 30%;
+      background-color: rgba(244, 244, 244, 0.95);
+      padding-bottom: 50%;
+
+      li {
+        padding-left: 40%;
+      }
+    }
+
+    .nav-list.show-vertical {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
 //UPPER SECTION
 
 .upper-section {
@@ -170,10 +169,6 @@
       margin-left: 10px;
       font-weight: 800;
       font-size: 16px;
-
-      @media (max-width: 768px) {
-        display: none;
-      }
     }
   }
 
@@ -526,6 +521,7 @@
 
           .article-text {
             font-size: 18px;
+            margin-top: 10px;
           }
         }
       }
